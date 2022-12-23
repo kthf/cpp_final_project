@@ -16,7 +16,6 @@ protected:
     
     virtual void balance(std::vector<AVLTreeNode<T>**> path) {};
     void display(AVLTreeNode<T>* cur, int depth=0, int state=0);
-    void inorder_util(std::vector<T> &v, AVLTreeNode<T> *root);
 public:
     AVLTreeBase();
     ~AVLTreeBase();
@@ -37,7 +36,6 @@ public:
     const T& operator[](std::size_t idx) const;
     
     void display();
-    std::vector<T> inorder();
 };
 
 #endif
