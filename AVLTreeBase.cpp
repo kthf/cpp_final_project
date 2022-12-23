@@ -263,22 +263,6 @@ void AVLTreeBase<T>::display(AVLTreeNode<T> *cur, int depth, int state){  // sta
         display(cur->right, depth + 1, 2);
 }
 
-template <typename T>
-void AVLTreeBase<T>::inorder_util(std::vector<T> &v, AVLTreeNode<T> *root) {
-    if (root == nullptr)
-        return;
-    v.push_back(root->value);
-    inorder_util(v, root->left);
-    inorder_util(v, root->right);
-}
-
-template <typename T>
-std::vector<T> AVLTreeBase<T>::inorder() {
-    std::vector<T> v;
-    inorder_util(v, root);
-    return v;
-}
-
 template class AVLTreeBase<int>;
 template class AVLTreeBase<short>;
 template class AVLTreeBase<long>;
